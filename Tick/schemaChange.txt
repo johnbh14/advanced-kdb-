@@ -1,0 +1,7 @@
+What would happen if a new column was added to our architecture?
+
+- sym.q would need to be updated to reflect the new column
+
+- the feedhandler would need to be able to cast that new column to the appropriate type
+
+- null column files would need be added for every table for every partition in our hdb

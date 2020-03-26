@@ -1,0 +1,8 @@
+It's likely that the queries are getting processed by the hdb one at a time in a serial manner. One user is waiting for another's to finish.
+
+To alleviate you could:
+
+- Start another hdb process and round-robin the queries from a gateway that the user submits queries to
+- Assign multiple processes to the hdb using -s [negative integer] to spread the load across multiple processes
+- Create multiple threads from the parent hdb and allow it to use many cores
+- Memory map the hdb using .Q.MAP[] with uncompressed data to avoid the system calls when reading in data

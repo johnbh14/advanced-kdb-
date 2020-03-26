@@ -1,0 +1,14 @@
+t1
+
+- No hidden .d file in the table directory
+- Need to create of file by saving down a symbol list of the column names as ".d" in the t1 directory
+
+t2
+
+- The price column only has 24 entries while the sym/size columns have 25
+- Append one more entry to the price column on disk
+
+t3
+
+- The sym column of this table is not enumerated against the sym file for the db
+- Read the sym column into memory and enumerate off the sym file before re-saving
