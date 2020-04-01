@@ -1,7 +1,7 @@
 t1
 
 - No hidden .d file in the table directory
-- Need to create of file by saving down a symbol list of the column names as ".d" in the t1 directory
+- Need to create the file by saving down a symbol list of the column names as ".d" in the t1 directory
 
 t2
 

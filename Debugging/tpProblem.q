@@ -1,4 +1,8 @@
-/load schemas
+/In order to locate the errors, I just attempted running upd in error-trapping mode for each line of the tplog. 
+/I was able to see the type errors this way, and I could see the flattened entry beginning at index 6 by doing a simple get on the tplog. 
+/Below is the code to fix the errors and replay the new log.
+
+/load schema
 trade:([]sym:`symbol$();price:`float$();size:`long$())
 
 /load in original tplog
@@ -23,5 +27,6 @@ h:hopen`:newTpLog;
 h each enlist each origTpLog;
 hclose h;
 
+/replay the new tplog to ensure it now works
 upd:{x insert y};
 -11!`:newTpLog;
